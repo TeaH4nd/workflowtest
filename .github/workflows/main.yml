@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-20.04
     timeout-minutes: 15
     steps:
+      - name: Config Local Git
+        run: |
+          git config --global user.email alexchamon@poli.ufrj.br
+          git config --global user.name "TeaH4nd"
+          
       - name: Check Merge to Development
         run: |
           git fetch --unshallow
